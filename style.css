@@ -11,6 +11,11 @@ html, body {
     margin-left: 65px;
     width: auto;
 }
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .full_screen {
     width: auto;
     height: 100vh;
