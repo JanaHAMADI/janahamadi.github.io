@@ -7,6 +7,18 @@ html, body {
     font-size: 16px;
     color: #38155C;
 }
+.dark { color:#9838F5;}
+.pale { color: #20F5A7;}
+.dark_background { background-color: #9838F5; }
+.pale_background { background-color: #20F5A7; }
+.filter_dark {
+    filter: invert(31%) 
+    sepia(57%) saturate(6788%) 
+    hue-rotate(262deg) brightness(98%) 
+    contrast(95%);
+}
+
+
 .flexy {display: flex;}
 
 /* ########## MOBILE FIRST ############ */
@@ -23,8 +35,34 @@ h2 {
 a {
     text-decoration: none;
     color: #38155C;
-    font-size: 5vw;
+    font-size: 3vw;
 }
+.nav-button {
+    margin: 5px;
+    padding: 10px;
+    width: 25vw;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+.nav-button:hover {
+    box-shadow:  10px 10px 10px #cccccc,
+                   0 0 0 #ffffff,
+                    0 0 0 #cccccc inset,
+                    2px 2px 2px #ffffff inset;
+}
+.nav-button a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+.nav-button:active {
+    box-shadow:  0 0 0 #16af77,
+                   0 0 0 #20F5A7,
+                    10px 10px 10px #16af77 inset,
+                    -10px -10px 10px #20F5A7 inset;
+}
+
+
 .vertical { flex-direction: column;
             justify-content: space-around;}
 .centered {align-items: center; }
@@ -119,41 +157,8 @@ img {
 
 */
 /* ########## STYLES ############# */
-.dark { color:#9838F5;}
-.pale { color: #20F5A7;}
-.dark_background { background-color: #9838F5; }
-.pale_background { background-color: #20F5A7; }
 
-.filter_dark {
-    filter: invert(31%) 
-    sepia(57%) saturate(6788%) 
-    hue-rotate(262deg) brightness(98%) 
-    contrast(95%);
-}
-.nav-button {
-    margin: 5px;
-    padding: 10px;
-    width: fit-content;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-}
-.nav-button:hover {
-    box-shadow:  10px 10px 10px #cccccc,
-                   0 0 0 #ffffff,
-                    0 0 0 #cccccc inset,
-                    2px 2px 2px #ffffff inset;
-}
-.nav-button a:hover {
-    color: #ffffff;
-    font-weight: bold;
-}
-.nav-button:active {
-    box-shadow:  0 0 0 #16af77,
-                   0 0 0 #20F5A7,
-                    10px 10px 10px #16af77 inset,
-                    -10px -10px 10px #20F5A7 inset;
-}
+
 
 
 .card {
