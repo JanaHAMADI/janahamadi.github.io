@@ -17,9 +17,25 @@ html, body {
     hue-rotate(262deg) brightness(98%) 
     contrast(95%);
 }
+.icon {
+    width: 10vw;
+    padding: 10px;
+}
+.lateral-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 12vw;
+    margin-left: 0;
+}
 
-
+.full-screen {  width : 100vw;
+                min-height: 100vh;}
 .flexy {display: flex;}
+.vertical { flex-direction: column;
+    justify-content: space-around;}
+.centered {align-items: center; }
 
 /* ########## MOBILE FIRST ############ */
 h1 {
@@ -35,12 +51,12 @@ h2 {
 a {
     text-decoration: none;
     color: #38155C;
-    font-size: 3vw;
+    font-size: 5vw;
 }
 .nav-button {
     margin: 5px;
     padding: 10px;
-    width: 25vw;
+    width: auto;
     border-radius: 10px;
     display: grid;
     place-items: center;
@@ -63,13 +79,9 @@ a {
 }
 
 
-.vertical { flex-direction: column;
-            justify-content: space-around;}
-.centered {align-items: center; }
-
-/* ######### DESKTOP ###########
+/* ######### DESKTOP ########### */
 @media only screen and (min-width: 750px) {
-    .line-to-col {flex-direction: column;}
+    
 }
 
 /*
@@ -192,20 +204,4 @@ img {
     sepia(57%) saturate(6788%) 
     hue-rotate(262deg) brightness(98%) 
     contrast(95%);
-}
-@media only screen and (min-width: 750px) {
-    h1 {
-        font-size: 50px;
-    }
-    .nav-button {
-        margin: 10px;
-        width: 150px;
-        height: 50px;
-    }
-    .nav-button a {
-        font-size: large;
-    }
-}
-.french {
-    display: none;
 }
