@@ -9,8 +9,8 @@ html, body {
 }
 .dark { color:#9838F5;}
 .pale { color: #20F5A7;}
-.dark_background { background-color: #9838F5; }
-.pale_background { background-color: #20F5A7; }
+.dark_background { background-color: #d7b7f8; }
+.pale_background { background-color: #6ef7c4; }
 .filter_dark {
     filter: invert(31%) 
     sepia(57%) saturate(6788%) 
@@ -28,6 +28,27 @@ html, body {
     height: 100vh;
     width: 12vw;
     margin-left: 0;
+}
+.section {
+    min-height: 100vh;
+    margin-left: 12vw;
+    width: 86vw;
+}
+.section p {
+    text-align: justify;
+    padding: 10px;
+}
+.griddy {
+    padding-left: 10px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(450px, 1fr));
+}
+.frame {
+    border: solid 2px #9838F5;
+    border-radius: 20px;
+    padding: 15px;
 }
 
 .full-screen {  width : 100vw;
@@ -84,98 +105,9 @@ a {
     
 }
 
-/*
-.section {
-    min-height: 100vh;
-    margin-left: 10%;
-    width: auto;
-}
-.flexbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.full_screen {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column; }
-.vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.shrinkable { width: 100vw; }
-.centered {display: grid;
-            place-items: center;}
-.buttons {
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-items: space-around;
-    z-index: 5;
-}
-img {
-    width: 100vw;
-    height: auto;
-    z-index: 0;
-}
-.lateral-navigation {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 10%;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.icon {
-    width: fit-content;
-}
-.icon img {
-    width: 4em;
-    height: auto;
-    margin: 5px;
-}
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.inline {
-    display: flex;
-    align-items: center;
-}
-.section-intro {
-    padding: 20px;
-    text-align: justify;
-}
-@media only screen and (min-width: 750px) {
-    img {
-        height: 99vh;
-        width: auto;
-        z-index: 0;
-    }
-    .shrinkable {width: 45vw;}
-    .buttons {
-        flex-direction: column;
-        padding-bottom: 0;
-        z-index: 5;
-    }
-}
-
-*/
-/* ########## STYLES ############# */
-
-
-
+/* revision needed */
 
 .card {
-    margin-bottom: 10px;
-    width: clamp(30ch, 30%, 46ch);
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -183,12 +115,6 @@ img {
     justify-content: space-between;
     border-radius: 3px;
     box-shadow: 4px 4px 4px #cccccc; 
-}
-.info {
-    background-color: rgba(152, 56, 245, 0.3);
-}
-.sample {
-    background-color: rgba(32, 245, 167, 0.4);
 }
 .logo {
     width: 50px;
@@ -205,3 +131,6 @@ img {
     hue-rotate(262deg) brightness(98%) 
     contrast(95%);
 }
+
+/* TO DO: add a ".glass" class to 
+apply a glassy plastic effect on items */
