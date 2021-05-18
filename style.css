@@ -1,5 +1,6 @@
 
 /* ########## GENERAL ############# */
+/* //////// general styling ////// */
 html, body {
     padding: 0;
     margin: 0;
@@ -18,33 +19,14 @@ html, body {
     hue-rotate(262deg) brightness(98%) 
     contrast(95%);
 }
+.glass {
+    opacity: 0.65;
+    border-radius: 3px;
+}
+.glass:hover,:active { opacity: 1; }
 .icon {
     width: 10vw;
     padding: 10px 10px 0 10px;
-}
-.lateral-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 12vw;
-    margin-left: 0;
-}
-.section {
-    min-height: 100vh;
-    margin-left: 12vw;
-    width: 86vw;
-}
-.section p {
-    text-align: justify;
-    padding: 10px;
-}
-.griddy {
-    padding-left: 10px;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, 
-    minmax(450px, 1fr));
 }
 .frame {
     border: solid 2px #9838F5;
@@ -60,35 +42,21 @@ html, body {
 .logo {
     text-align: center;
 }
-.logo p {
-    font-size: 4vw;
-    padding-top: 0;
+ /* /////// general layout /////////// */
+.lateral-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin-left: 0;
+    width: 10vw;
 }
-footer { color: white;}
-
-.full-screen {  width : 100vw;
-                min-height: 100vh;}
-.flexy {display: flex;}
-.vertical { flex-direction: column;
-    justify-content: space-around;}
-.centered {align-items: center; }
-.betweeny {justify-content: space-between;}
-
-/* ########## MOBILE FIRST ############ */
-h1 {
-    font-size: 10vw;
-    text-shadow:4px 4px 4px #cccccc;
-    text-align: center;
-}
-h2 {
-    font-size: 7vw;
-    text-shadow: 4px 4px 4px #cccccc;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-    color: #38155C;
-    font-size: 5vw;
+.griddy {
+    padding-left: 10px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(450px, 1fr));
 }
 .nav-button {
     margin: 5px;
@@ -104,26 +72,74 @@ a {
                     0 0 0 #cccccc inset,
                     2px 2px 2px #ffffff inset;
 }
-.nav-button a:hover {
-    color: #ffffff;
-    font-weight: bold;
-}
 .nav-button:active {
     box-shadow:  0 0 0 #16af77,
                    0 0 0 #20F5A7,
                     10px 10px 10px #16af77 inset,
                     -10px -10px 10px #20F5A7 inset;
 }
+footer { color: white;}
 
-/* ######### DESKTOP ########### */
+.full-screen {  width : 100vw;
+                min-height: 100vh;}
+.flexy {display: flex;}
+.vertical { flex-direction: column;
+    justify-content: space-around;}
+.centered {align-items: center; }
+.betweeny {justify-content: space-between;}
+
+/* ########## MOBILE FIRST ############ */
+.col-line { flex-direction: column;
+    justify-content: space-around;}
+.main {width: 88vw;
+        margin-left: 11vw;}
+h1 {
+    font-size: 10vw;
+    text-shadow:4px 4px 4px #cccccc;
+    text-align: center;
+}
+h2 {
+    font-size: 7vw;
+    text-shadow: 4px 4px 4px #cccccc;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #38155C;
+    font-size: 5vw;
+}
+.section { min-height: 100vh;}
+/* .section p {
+    text-align: justify;
+    padding: 10px;
+}
+.logo p {
+    font-size: 4vw;
+    padding-top: 0;
+} */
+p {
+    font-size: 4vw;
+    padding: 10px;
+    text-align: justify;
+}
+
+
+/* ######### MEDIUM ########## */
 @media only screen and (min-width: 750px) {
- 
+    h1 {font-size: 5vw;}
+    h2 {font-size: 4vw;}
+    a {font-size: 2vw;}
+    .icon {width: 4vw;}
 }
-/* TO DO: add a ".glass" class to 
-apply a glassy plastic effect on items */
-.glass {
-    opacity: 0.65;
-}
-.glass:hover,:active {
-    opacity: 1;
+
+/* ######### LARGE ########### */
+@media only screen and (min-width: 1000px) {
+    .shrinkable {
+        width: 45vw;
+    }
+    .col-line {flex-direction: row-reverse;}
+    .section {
+        margin-left: 6vw;
+        width: 85vw;
+    }
 }
