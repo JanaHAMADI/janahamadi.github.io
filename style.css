@@ -6,6 +6,7 @@ html, body {
     font-family: Geneva, Verdana, Tahoma, sans-serif;
     font-size: 16px;
     color: #38155C;
+    scroll-behavior: smooth;
 }
 .dark { color:#9838F5;}
 .pale { color: #20F5A7;}
@@ -116,8 +117,13 @@ a {
 
 /* ######### DESKTOP ########### */
 @media only screen and (min-width: 750px) {
-    
+ 
 }
-
 /* TO DO: add a ".glass" class to 
 apply a glassy plastic effect on items */
+.glass {
+    opacity: 0.65;
+}
+.glass:hover,:active {
+    opacity: 1;
+}
