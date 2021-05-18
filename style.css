@@ -50,6 +50,16 @@ html, body {
     border-radius: 20px;
     padding: 15px;
 }
+.card {
+    height: 400px;
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: 4px 4px 4px #cccccc; 
+}
+.logo p {
+    font-size: 4vw;
+}
+footer { color: white;}
 
 .full-screen {  width : 100vw;
                 min-height: 100vh;}
@@ -57,6 +67,7 @@ html, body {
 .vertical { flex-direction: column;
     justify-content: space-around;}
 .centered {align-items: center; }
+.betweeny {justify-content: space-between;}
 
 /* ########## MOBILE FIRST ############ */
 h1 {
@@ -99,37 +110,9 @@ a {
                     -10px -10px 10px #20F5A7 inset;
 }
 
-
 /* ######### DESKTOP ########### */
 @media only screen and (min-width: 750px) {
     
-}
-
-/* revision needed */
-
-.card {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    justify-content: space-between;
-    border-radius: 3px;
-    box-shadow: 4px 4px 4px #cccccc; 
-}
-.logo {
-    width: 50px;
-    height: auto;
-    margin: 20px;
-    padding: 5px;
-    border-left:solid 5px white;
-}
-.logo:hover {
-    border-left:solid 5px black;
-    border-radius: 3px;
-    filter: invert(31%) 
-    sepia(57%) saturate(6788%) 
-    hue-rotate(262deg) brightness(98%) 
-    contrast(95%);
 }
 
 /* TO DO: add a ".glass" class to 
