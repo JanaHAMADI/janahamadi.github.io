@@ -24,10 +24,7 @@ html, body {
     border-radius: 3px;
 }
 .glass:hover,:active { opacity: 1; }
-.icon {
-    width: 10vw;
-    padding: 10px 10px 0 10px;
-}
+
 .frame {
     border: solid 2px #9838F5;
     border-radius: 20px;
@@ -42,16 +39,17 @@ html, body {
 .logo {
     text-align: center;
 }
- /* /////// general layout /////////// */
 .lateral-nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     height: 100vh;
     margin-left: 0;
-    width: 10vw;
+    width: 7rem;
 }
-.griddy {
+.main {padding-left: 7rem;}
+ /* /////// general layout /////////// */
+ .griddy {
     padding-left: 10px;
     display: grid;
     grid-gap: 1rem;
@@ -80,8 +78,8 @@ html, body {
 }
 footer { color: white;}
 
-.full-screen {  width : 100vw;
-                min-height: 100vh;}
+.full-screen {  width : 100%;
+                height: 100vh;}
 .flexy {display: flex;}
 .vertical { flex-direction: column;
     justify-content: space-around;}
@@ -90,56 +88,47 @@ footer { color: white;}
 
 /* ########## MOBILE FIRST ############ */
 .col-line { flex-direction: column;
-    justify-content: space-around;}
-.main {width: 88vw;
-        margin-left: 11vw;}
+    justify-content: space-around;
+    flex-wrap: wrap;}
+
 h1 {
-    font-size: 10vw;
+    font-size: 10rem;
     text-shadow:4px 4px 4px #cccccc;
     text-align: center;
 }
 h2 {
-    font-size: 7vw;
+    font-size: 6rem;
     text-shadow: 4px 4px 4px #cccccc;
     text-align: center;
 }
 a {
     text-decoration: none;
     color: #38155C;
-    font-size: 5vw;
+    font-size: 4rem;
 }
-.section { min-height: 100vh;}
-/* .section p {
+.icon { width: 6rem;
+        padding: 10px 10px 0 10px;}
+p { padding: 10px;
     text-align: justify;
-    padding: 10px;
-}
-.logo p {
-    font-size: 4vw;
-    padding-top: 0;
-} */
-p {
-    font-size: 4vw;
-    padding: 10px;
-    text-align: justify;
-}
-
+    font-size: 2rem;}
+.section {  min-height: 100vh;
+            margin-left: 10px;}
 
 /* ######### MEDIUM ########## */
 @media only screen and (min-width: 750px) {
-    h1 {font-size: 5vw;}
-    h2 {font-size: 4vw;}
-    a {font-size: 2vw;}
-    .icon {width: 4vw;}
+    h1 {font-size: 4rem;}
+    h2 {font-size: 3rem;}
+    a {font-size: 2rem;}
+    .icon {width: 4rem;}
+    .lateral-nav {width: 5rem;}
+    .main {padding-left: 5rem;}
 }
 
 /* ######### LARGE ########### */
-@media only screen and (min-width: 1000px) {
-    .shrinkable {
-        width: 45vw;
-    }
-    .col-line {flex-direction: row-reverse;}
-    .section {
-        margin-left: 6vw;
-        width: 85vw;
-    }
+@media only screen and (min-width: 900px) {
+    .col-line {flex-direction: row;}
+    .icon {width: 3rem;}
+    .col-line { flex-direction: row;
+                flex-wrap: wrap;}
+    .shrinkable {width: 40rem;}
 }
