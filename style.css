@@ -45,10 +45,13 @@ html, body {
     top: 0;
     height: 100vh;
     margin-left: 0;
-    width: 7rem;
+    width: calc(1.5rem + 3vw);
 }
-.main {padding-left: 7rem;}
+
  /* /////// general layout /////////// */
+ .col-line { flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;}
  .griddy {
     padding-left: 10px;
     display: grid;
@@ -78,7 +81,7 @@ html, body {
 }
 footer { color: white;}
 
-.full-screen {  width : 100%;
+.full-screen {  width : 100vw;
                 height: 100vh;}
 .flexy {display: flex;}
 .vertical { flex-direction: column;
@@ -87,48 +90,40 @@ footer { color: white;}
 .betweeny {justify-content: space-between;}
 
 /* ########## MOBILE FIRST ############ */
-.col-line { flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;}
+
 
 h1 {
-    font-size: 10rem;
+    font-size: calc(2rem + 3vw);
     text-shadow:4px 4px 4px #cccccc;
     text-align: center;
 }
 h2 {
-    font-size: 6rem;
+    font-size: calc(1.5rem + 3vw);
     text-shadow: 4px 4px 4px #cccccc;
     text-align: center;
 }
 a {
     text-decoration: none;
     color: #38155C;
-    font-size: 4rem;
+    font-size: calc(1rem + 3vw);
 }
-.icon { width: 6rem;
-        padding: 10px 10px 0 10px;}
+.icon { width: calc(1rem + 3vw); 
+        margin: auto 0;}
 p { padding: 10px;
     text-align: justify;
-    font-size: 2rem;}
-.section {  min-height: 100vh;
-            margin-left: 10px;}
+    font-size: calc(1 + 3vw);}
+.section {  min-height: 100vh;}
 
 /* ######### MEDIUM ########## */
 @media only screen and (min-width: 750px) {
     h1 {font-size: 4rem;}
     h2 {font-size: 3rem;}
-    a {font-size: 2rem;}
-    .icon {width: 4rem;}
-    .lateral-nav {width: 5rem;}
+    a {font-size: 1rem;}
     .main {padding-left: 5rem;}
+    p {font-size: 1rem;}
 }
 
 /* ######### LARGE ########### */
 @media only screen and (min-width: 900px) {
-    .col-line {flex-direction: row;}
-    .icon {width: 3rem;}
-    .col-line { flex-direction: row;
-                flex-wrap: wrap;}
     .shrinkable {width: 40rem;}
 }
