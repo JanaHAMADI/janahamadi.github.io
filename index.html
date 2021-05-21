@@ -1,204 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Jana Hamadi - web development</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body>
-    <div class="full-screen flexy col-line" id="intro">
-        <img src="img/laptop.svg" alt="laptop" 
-        class="shrinkable">
-        <div class="flexy vertical">
-            <div>
+    <div class="main">
+        <section class="intro" id="home">
+            <img src="img/laptop.svg" alt="laptop" class="">
+            <div class="title">
                 <h1 class="dark">Jana HAMADI</h1>
                 <h2 class="pale">Web Development</h2>
-                <div class="flexy vertical centered">
-                    <a href="#bio">
-                        <div class="nav-button pale_background">Short Bio</div>
-                    </a>
-                    <a href="#work">
-                        <div class="nav-button pale_background">My Work</div>
-                    </a>
-                    <a href="#contact">
-                        <div class="nav-button pale_background">Contact</div>
-                    </a>
-                </div>
             </div>
-        </div> 
-    </div>
-    <div class="lateral-nav pale_background 
-    flexy vertical">
-        <a href="#intro">
-                <img src="img/home.svg" 
-                alt="home"
-                class="icon filter_dark">
-        </a>
-        <a href="#bio">
-                <img src="img/bio.svg" 
-                alt="bio"
-                class="icon filter_dark">
-        </a>
-        <a href="#work">
-                <img src="img/work.svg" 
-                alt="work"
-                class="icon filter_dark">
-        </a>
-        <a href="#contact">
-                <img src="img/contact.svg" 
-                alt="contact"
-                class="icon filter_dark">
-        </a>
-    </div>
-    <div class="main">
-       
-        <div class="section" id="bio">
-            <h2>My Short Bio</h2>
-            <div>
-                <p>After years of studying languages and 
-                    preparing myself to become a teacher, I stumbled upon programming. 
-                    Never have I considered a career in IT : gender stereotypes thaught me 
-                    that technical domains are not for girls.</p>
-                <p>It was the love at first sight. I found in programming 
-                    what I loved about languages : studying, learning and using logic 
-                    to pass a message ot trigger an action. It's creative and challanging work 
-                    in which you will never stop learning. That's the dream !</p>
-                <p>I wish to work on products with enviromental issues in mind, 
-                    to create tools that are light in energy and memory space. I would love to
-                work on products helping to reduce human impact on the climate change.</p>
+            <div class="nav-buttons">
+                <a href="#bio">
+                    <div class="nav-button pale_background">Bio</div>
+                </a>
+                <a href="#portfolio">
+                    <div class="nav-button pale_background">Portfolio</div>
+                </a>
+                <a href="#contact">
+                    <div class="nav-button pale_background">Contact</div>
+                </a>
+            </div>
+        </section>
+
+        <div class="navbar pale_background flexy vertical">
+            <a href="#home">
+                <img src="img/home.svg" alt="home" class="icon filter_dark">
+            </a>
+            <a href="#bio">
+                <img src="img/bio.svg" alt="bio" class="icon filter_dark">
+            </a>
+            <a href="#work">
+                <img src="img/work.svg" alt="work" class="icon filter_dark">
+            </a>
+            <a href="#contact">
+                <img src="img/contact.svg" alt="contact" class="icon filter_dark">
+            </a>
+        </div>
+
+        <div class="content">
+            <section class="" id="bio">
+                <h2>My Short Bio</h2>
+                <div>
+                    <p>After years of studying languages and
+                        preparing myself to become a teacher, I stumbled upon programming.
+                        Never have I considered a career in IT : gender stereotypes thaught me that technical domains
+                        are not
+                        for girls.</p>
+                    <p>It was the love at first sight. I found in programming
+                        what I loved about languages : studying, learning and using logic
+                        to pass a message ot trigger an action. It's creative and challanging work
+                        in which you will never stop learning. That's the dream !</p>
+                    <p>I wish to work on products with enviromental issues in mind,
+                        to create tools that are light in energy and memory space. I would love to
+                        work on products helping to reduce human impact on the climate change.</p>
                 </div>
-            <div class="griddy">
-                <div class="frame">
-                    <h3>Work experience</h3>
-                    <h4>December 7th, 2020 - Fenruary 12th, 2021: intership at Constellation, France</h4>
-                    <ul>
-                        <li>developping a Single Page App</li>
-                        <li>front: Angular</li>
-                        <li>back: Spring Boot (API REST), h2</li>
-                    </ul>
-                    <h4>2016 - 2018: teaching English</h4>
-                    <ul>
-                        <li>preparing plans and lessons</li>
-                        <li>producing teaching material</li>
-                        <li>teaching at a secondary school</li>
-                    </ul>
-                    <h4>2008 - 2011: receptionist</h4>
-                    <ul>
-                        <li>student job</li>
-                        <li>check-in, check-out, administrative work</li>
-                        <li>organisation of staff, sales</li>
-                    </ul>
-                </div>
-                <div class="frame">
-                    <h3>Education</h3>
-                    <h4>2019 - now: programming</h4>
-                    <ul>
-                        <li>'Web and Mobile Developer' certification from ENI - IT school</li>
-                        <li>'Responsive Web Design' <a href="https://www.freecodecamp.org/certification/jana_hamadi/responsive-web-design" target="_blank">certification from freeCodeCamp</a></li>
-                        <li>courses at OpenClassrooms in the domain of programming</li>
-                    </ul>
-                    <h4>2016-2018: teacher training</h4>
+                <div class="griddy griddy-flow">
+                    <div class="frame">
+                        <h3>Work experience</h3>
+                        <h4>December 7th, 2020 - Fenruary 12th, 2021: intership at Constellation, France</h4>
+                        <ul>
+                            <li>developping a Single Page App</li>
+                            <li>front: Angular</li>
+                            <li>back: Spring Boot (API REST), h2</li>
+                        </ul>
+                        <h4>2016 - 2018: teaching English</h4>
+                        <ul>
+                            <li>preparing plans and lessons</li>
+                            <li>producing teaching material</li>
+                            <li>teaching at a secondary school</li>
+                        </ul>
+                        <h4>2008 - 2011: receptionist</h4>
+                        <ul>
+                            <li>student job</li>
+                            <li>check-in, check-out, administrative work</li>
+                            <li>organisation of staff, sales</li>
+                        </ul>
+                    </div>
+                    <div class="frame">
+                        <h3>Education</h3>
+                        <h4>2019 - now: programming</h4>
+                        <ul>
+                            <li>'Web and Mobile Developer' certification from ENI - IT school</li>
+                            <li>'Responsive Web Design' <a
+                                    href="https://www.freecodecamp.org/certification/jana_hamadi/responsive-web-design"
+                                    target="_blank">certification from freeCodeCamp</a></li>
+                            <li>courses at OpenClassrooms in the domain of programming</li>
+                        </ul>
+                        <h4>2016-2018: teacher training</h4>
                         <ul>
                             <li>training at National Institute of Teaching and Education, Rennes, France</li>
                             <li>intership: teaching English in secondary school</li>
                         </ul>
-                    <h4>2008 - 2016: foreign languages</h4>
-                    <ul>
-                        <li>Bachelor degree in Foreign Languages, Literature and Culture, domain: English at University Rennes 2, Rennes, France</li>
-                        <li>Bachelor deree in French Language, Literature and Culture at Comenius University, Bratislava, SVK</li>
-                    </ul>
+                        <h4>2008 - 2016: foreign languages</h4>
+                        <ul>
+                            <li>Bachelor degree in Foreign Languages, Literature and Culture, domain: English at
+                                University
+                                Rennes 2, Rennes, France</li>
+                            <li>Bachelor deree in French Language, Literature and Culture at Comenius University,
+                                Bratislava,
+                                SVK</li>
+                        </ul>
 
+                    </div>
+                    <div class="frame">
+                        <h3>Skills</h3>
+                        <h4>Technical skills</h4>
+                        <ul>
+                            <li>HTML5, CSS3 (Bootstrap)</li>
+                            <li>JavaScript (JQueary, Angular)</li>
+                            <li>Java SE, Java EE (Spring Boot)</li>
+                            <li>PHP (Symfony)</li>
+                            <li>SQL</li>
+                        </ul>
+                        <h4>Soft skills</h4>
+                        <ul>
+                            <li>adaptability</li>
+                            <li>communication</li>
+                            <li>understanding of needs</li>
+                            <li>will and ability to learn new things</li>
+                        </ul>
+                        <h4>Foreign languages</h4>
+                        <ul>
+                            <li>English, C1</li>
+                            <li>French, C1</li>
+                            <li>Spanish, B2</li>
+                            <li>Slovak, Czech, native</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="frame">
-                    <h3>Skills</h3>
-                    <h4>Technical skills</h4>
-                    <ul>
-                        <li>HTML5, CSS3 (Bootstrap)</li>
-                        <li>JavaScript (JQueary, Angular)</li>
-                        <li>Java SE, Java EE (Spring Boot)</li>
-                        <li>PHP (Symfony)</li>
-                        <li>SQL</li>
-                    </ul>
-                    <h4>Soft skills</h4>
-                    <ul>
-                        <li>adaptability</li>
-                        <li>communication</li>
-                        <li>understanding of needs</li>
-                        <li>will and ability to learn new things</li>
-                    </ul>
-                    <h4>Foreign languages</h4>
-                    <ul>
-                        <li>English, C1</li>
-                        <li>French, C1</li>
-                        <li>Spanish, B2</li>
-                        <li>Slovak, Czech, native</li>
-                    </ul>
-                </div>
-            </div>
+            </section>
 
+            <section class="" id="work">
+                <h2>My work</h2>
+                <div class="griddy griddy-flow">
+                    <div class="card dark_background flexy vertical betweeny">
+                        <h3>Wordpress e-shop page</h3>
+                        <p>The e-shop page made with WordPress and WooCommerce is available
+                            <a href="https://www.fiffik.eu" target="_blank">here</a>.
+                        </p>
+                        <iframe src="https://www.fiffik.eu" height="300"></iframe>
+                    </div>
+                    <div class="card pale_background flexy vertical betweeny">
+                        <h3>Project</h3>
+                    </div>
+                    <div class="card dark_background flexy vertical betweeny">
+                        <h3>Project</h3>
+                    </div>
+                    <div class="card pale_background flexy vertical betweeny">
+                        <h3>Project</h3>
+                    </div>
+                    <div class="card dark_background flexy vertical betweeny">
+                        <h3>Project</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flexy vertical betweeny" id="contact">
+                <h2>Contact</h2>
+                <div class="griddy griddy-flow">
+                    <a href="mailto:jana.f.hamadi@gmail.com">
+                        <div class="logo pale_background glass">
+                            <img class="icon filter_dark" src="img/mail.svg" alt="">
+                            <p>Click here to mail me</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jana-hamadi-6b7737198/" target="_blank">
+                        <div class="logo pale_background glass">
+                            <img class="icon filter_dark" src="img/linkedin.svg" alt="logo linkedin">
+                            <p>My linkedIn profile</p>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/jana.hamadi.37" target="_blank">
+                        <div class="logo pale_background glass">
+                            <img class="icon filter_dark" src="img/facebook.svg" alt="logo facebook">
+                            <p>My Facebook profile</p>
+                        </div>
+                    </a>
+                    <a href="https://codepen.io/JanaHamadi">
+                        <div class="logo pale_background glass">
+                            <img class="icon filter_dark" src="img/codePen.svg" alt="logo CodePen">
+                            <p>My CodePen projects</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </div>
-        <div class="section" id="work">
-            <h2>My work</h2>
-            <div class="griddy">
-                <div class="card dark_background flexy vertical betweeny">
-                    <h3>Wordpress e-shop page</h3>
-                    <p>The e-shop page made with WordPress and WooCommerce is available 
-                        <a href="https://www.fiffik.eu" target="_blank">here</a>.</p>
-                    <iframe src="https://www.fiffik.eu" height="300"></iframe>
-                </div>
-                <div class="card pale_background flexy vertical betweeny">
-                    <h3>Project</h3>
-                </div>
-                <div class="card dark_background flexy vertical betweeny">
-                    <h3>Project</h3>
-                </div>
-                <div class="card pale_background flexy vertical betweeny">
-                    <h3>Project</h3>
-                </div>
-                <div class="card dark_background flexy vertical betweeny">
-                    <h3>Project</h3>
-                </div>
+        <footer class="dark_background">
+            <div>
+                <p>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+                <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
             </div>
-        </div>
-        <div class="section flexy vertical betweeny" id="contact">
-            <h2>Contact</h2>
-            <div class="griddy">
-                <a href="mailto:jana.f.hamadi@gmail.com">
-                    <div class="logo pale_background glass">   
-                        <img class="icon filter_dark" src="img/mail.svg" alt="">
-                        <p>Click here to mail me</p>
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/jana-hamadi-6b7737198/" target="_blank">
-                    <div class="logo pale_background glass">   
-                        <img class="icon filter_dark" src="img/linkedin.svg" alt="logo linkedin">
-                        <p>My linkedIn profile</p>
-                    </div>
-                </a>
-                <a href="https://www.facebook.com/jana.hamadi.37" target="_blank">
-                    <div class="logo pale_background glass">   
-                        <img class="icon filter_dark" src="img/facebook.svg" alt="logo facebook">
-                        <p>My Facebook profile</p>
-                    </div>
-                </a>
-                <a href="https://codepen.io/JanaHamadi">
-                    <div class="logo pale_background glass">    
-                        <img class="icon filter_dark" src="img/codePen.svg" alt="logo CodePen">
-                        <p>My CodePen projects</p>
-                    </div>
-                </a>
+            <div>
+                <p>&copy; Jana Hamadi 2021</p>
             </div>
-            <footer class="dark_background">
-                <div>
-                    <p>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-                    <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-                </div>
-                <div>
-                    <p>&copy; Jana Hamadi 2021</p>
-                </div>
-            </footer>  
-        </div>
-    </div>  
+        </footer>
+    </div>
 </body>
+
 </html>
