@@ -14,6 +14,7 @@ html, body {
     position: absolute;
     top: 100px;
     left: 30px;
+    right: 30px;
     background-color: rgb(191, 130, 224, 0.75);
     z-index: 3;
 }
