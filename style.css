@@ -110,6 +110,10 @@ p {
 .flexy {
     display: flex;
 }
+
+/* ########## MOBILE FIRST ############ */
+ 
+/* /////// INTRO page /////////// */
 .vertical {
     flex-direction: column;
     justify-content: space-around;
@@ -120,18 +124,12 @@ p {
     align-items: center;
     justify-content: center;
 }
-
-
-/* ########## MOBILE FIRST ############ */
- /* /////// layout /////////// */
  .picture {width: 100%;}
  .item {
      width: 100%;
     justify-content: flex-start;}
- .intr_o {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
- }
+ 
+/* /////// CONTENT page /////////// */
 
 .navbar {
     grid-column: 1 / 3;
@@ -148,6 +146,7 @@ footer {
 
 /* ######### MEDIUM ########## */
 @media only screen and (min-width: 550px) {
+    /* /////// INTRO page /////////// */
     .picture {width: 60%;}
     .item {width: 40%;}
     h1 {white-space: nowrap;
@@ -156,14 +155,17 @@ footer {
     .nav-button {
         font-size: 1.5rem;
     }
-    .horizontal {
-        justify-content: flex-start;
-    }
+   
+
+    /* /////// COCNTENT page /////////// */
 }
 
 /* ######### LARGE ########### */
 @media only screen and (min-width: 900px) {
-   .nav-button {
+   /* /////// INTRO page /////////// */
+    .nav-button {
         font-size: 2rem;
     }
+
+    /* /////// CONTENT page /////////// */
 }
