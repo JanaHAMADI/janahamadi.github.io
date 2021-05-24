@@ -17,6 +17,8 @@ html, body {
     right: 30px;
     background-color: rgb(191, 130, 224, 0.75);
     z-index: 3;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
 }
 .dark { color:#9838F5;}
 .pale { color: #20F5A7;}
@@ -28,7 +30,7 @@ html, body {
     hue-rotate(262deg) brightness(98%) 
     contrast(95%);
 }
-.name, .title {display: block;}
+
 .glass {
     opacity: 0.65;
     border-radius: 3px;
@@ -45,9 +47,6 @@ html, body {
     padding: 1rem;
     border-radius: 3px;
     box-shadow: 4px 4px 4px #cccccc; 
-}
-.logo {
-    text-align: center;
 }
 .nav-button {
     margin: 5px;
@@ -68,6 +67,37 @@ html, body {
                     -10px -10px 10px #20F5A7 inset;
 }
 footer { color: white;}
+
+
+/* ############## general layout rules ########## */
+
+.griddy {
+    display: grid;
+ }
+ .griddy-flow {
+    grid-template-columns: repeat(auto-fit, 
+    minmax(300px, 1fr));
+    gap: 10px;
+}
+.centered {
+    display: grid;
+    place-items: center;
+}
+.flexy {
+    display: flex;
+}
+.vertical {
+    flex-direction: column;
+    justify-content: space-around;
+}
+.horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ########## MOBILE FIRST ############ */
 h1 {
     font-size: calc(2.5rem + 3vw);
     text-shadow:4px 4px 4px #cccccc;
@@ -82,73 +112,45 @@ a {
     color: #38155C;
     font-size: calc(0.3rem + 3vw);
 }
-.nav-button {font-size: calc(0.3rem + 3vw);}
 .icon { 
-    width: calc(0.5rem + 3vw); 
+    width: calc(1rem + 3vw); 
     margin: auto 0;
+    padding: 10px;
     }
 p { 
     padding: 10px;
     text-align: justify;
     font-size: calc(0.3rem + 3vw);
 }
-.item {max-width: 400px;}
-/* ############## general layout ########## */
+ 
+/* /////// INTRO page /////////// */
 .full-screen {
     width: 100%;
     height: 100vh;
 }
-.griddy {
-    display: grid;
- }
- .main {
-     display: grid;
-     grid-template-columns: repeat(12, 1fr);
-     grid-template-rows: 100vh minmax(100vh, auto) auto;
- }
- .griddy-flow {
-    grid-template-columns: repeat(auto-fit, 
-    minmax(300px, 1fr));
-    gap: 10px;
-}
-.centered {
-    display: grid;
-    place-items: center;
-}
-.flexy {
-    display: flex;
-}
 
-/* ########## MOBILE FIRST ############ */
- 
-/* /////// INTRO page /////////// */
-.vertical {
-    flex-direction: column;
-    justify-content: space-around;
-}
-.horizontal {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
- .picture {width: 100%;}
+.name, .title {display: block;} 
+.picture {width: 100%;}
  .item {
-     width: 100%;
+    width: 100%;
     justify-content: flex-start;}
- 
+.nav-button {font-size: calc(0.3rem + 3vw);}
+
 /* /////// CONTENT page /////////// */
 
+.main {
+    display: grid;
+    grid-template-columns: auto auto;
+}
 .navbar {
+    grid-column: 1 / 2;
     height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: fit-content;
 }
 .content {
     min-height: 100vh;
+    grid-column: 2 / 3;
 }
+
 footer {
     grid-column: 1 / 13;
     grid-row: 3 / 4;
