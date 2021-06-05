@@ -114,6 +114,7 @@ h3 {font-size: calc(0.1rem + 2vw);}
 h4 {font-size: calc(0.5rem + 2vw);}
 a {
     text-decoration: none;
+    font-weight: bold;
     color: #38155C;
     font-size: calc(0.5rem + 2vw);
 }
@@ -129,6 +130,7 @@ p {
     padding: 10px;
     text-align: justify;
     font-size: calc(0.5rem + 2vw);
+    overflow: auto;
 }
  
 /* /////// INTRO page /////////// */
@@ -184,7 +186,10 @@ footer {
 
 /* ######### LARGE ########### */
 @media only screen and (min-width: 900px) {
-   /* /////// INTRO page /////////// */
+   * {
+       font-size: 5px;
+   }
+    /* /////// INTRO page /////////// */
     .nav-button {
         font-size: 2rem;
     }
