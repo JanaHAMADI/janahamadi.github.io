@@ -9,48 +9,77 @@
 </head>
 
 <body>
-    <div id="landing">
-        <div class="svg-wrapper">
-          <a id="jump" href="#portfolio">
-            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-          <rect class="shape" height="60" width="320" />
-          <div class="text">Jana HAMADI</div>
-          </svg></a>
-        </div>
-      </div>
-      <div id="portfolio">
-        <div id="port-wrapper">
-          <div class="text-2">
-            <button id="first" href="#text-changer-1"><h2>About me</h2></button>
-            <button id="second" href="#text-changer-2"><h2>Portfolio</h2></button>
-            <button id="third" href="#text-changer-3"><h2>Contacts</h2></button>
-            <div id="text-changer-1" class="content">
-              <p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/497606/profile/profile-512_1.jpg" width="100px" align="left" />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id="landing" class="griddy centered">
+            <a id="jump" href="#home">
+                    <p class="intro-text">Bienvenu ! Je m'appelle </p>
+                    <h1 class="name dark">Jana HAMADI</h1>
+                    <p class="intro-text">
+                        <span class="lead" id="typed">Je suis </span>
+                    </p>
+            </a>
+    </div>
+
+    <div  id="home" class="dark_background white">
+            <div class="navbar dark_background dark_shadow">
+                
+                <button id="first" href="#bio"><h2>Mes compétences</h2></button>
+                <button id="second" href="#work"><h2>Portfolio</h2></button>
+                <button id="third" href="#contact"><h2>Contactez-moi</h2></button>
             </div>
-            <div id="text-changer-2" class="content row">
-              <div class="col-sm-3 col-xs-6">Project 1<br><div class="project"></div></div>
-              <div class="col-sm-3 col-xs-6">Project 2<br><div class="project"></div></div>
-              <div class="col-sm-3 col-xs-6">Project 3<br><div class="project"></div></div>
-              <div class="col-sm-3 col-xs-6">Project 4<br><div class="project"></div></div>
+
+            <div id="bio" class="content flexy">
+                <div>
+                    <img src="img/portrait.svg" alt="développeuse web" class="image"/>
+                </div>
+                <div class="box">
+                    <p>Depuis mon initiation en autodidacte au dévéloppement web en 2019, je me fraie mon petit chemin vers
+                        les savoirs de ce métier passionnant.
+                    </p>
+                    <p>Je suis conveincue que la technologie n'a sens uniquement si elle sert à libérer le potentiel de l'être humain 
+                        des tâches peu ou pas créatives et qu'elle doit s'inscrire dans le contexte actuel en prenant en compte les enjeux écologiques.
+                    </p>
+                </div>
+                
             </div>
-            <div id="text-changer-3" class="content">
-              <p>Get in touch or follow me at:<br>
+
+            <div id="work" class="content griddy cards">
+              <div class="card pale_background dark_shadow">
+                  <h3>Project title centered</h3>
+                  <p>Description of the project shown off on hover</p>
+              </div>
+              <div class="card pale_background dark_shadow">
+                <h3>Project title centered</h3>
+                <p>Description of the project shown off on hover</p>
+            </div>
+            <div class="card pale_background dark_shadow">
+                <h3>Project title centered</h3>
+                <p>Description of the project shown off on hover</p>
+            </div>
+            <div class="card pale_background dark_shadow">
+                <h3>Project title centered</h3>
+                <p>Description of the project shown off on hover</p>
+            </div>
+
+            </div>
+
+            <div id="contact" class="content">
+              <p>Me joindre :<br>
                 <div class="social">
-                  <a href="https://twitter.com/fragno92" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-                  <a href="https://github.com/Kornil" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                  <a href="https://codepen.io/Kornil" target="_blank"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a>
+                  <a href="https://www.linkedin.com/in/jana-hamadi-6b7737198/" target="_blank"><img class="logo" src="img/linkedin.svg" alt="linked in logo"/></a>
+                  <a href="https://codepen.io/JanaHamadi" target="_blank"><img class="logo" src="img/codePen.svg"/></a>
+                  <a href="https://github.com/JanaHAMADI" target="_blank"><img class="logo" src="img/work.svg" /></a>
                 </div>
               </p>
             </div>
-          </div>
-        </div>
       </div>
     
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    
+    
     <script>
-        $(document).ready(function(){
-  $('#jump').smoothScroll({speed:1500});
   
   $("button").click(function(){
     var target = $(this).attr("href");
@@ -63,7 +92,248 @@
   
   $("#first").click();
   
+
+$( window ).resize( function() {
+  centerSplash();
 });
+</script>
+
+<script>
+
+!function($){
+
+    "use strict";
+
+    var Typed = function(el, options){
+
+        // chosen element to manipulate text
+        this.el = $(el);
+        // options
+        this.options = $.extend({}, $.fn.typed.defaults, options);
+
+        // text content of element
+        this.text = this.el.text();
+
+        // typing speed
+        this.typeSpeed = this.options.typeSpeed;
+
+        // amount of time to wait before backspacing
+        this.backDelay = this.options.backDelay;
+
+        // input strings of text
+        this.strings = this.options.strings;
+
+        // character number position of current string
+        this.strPos = 0;
+
+        // current array position
+        this.arrayPos = 0;
+
+        // current string based on current values[] array position
+        this.string = this.strings[this.arrayPos];
+
+        // number to stop backspacing on.
+        // default 0, can change depending on how many chars
+        // you want to remove at the time
+        this.stopNum = 0;
+
+        // Looping logic
+        this.loop = this.options.loop;
+        this.loopCount = this.options.loopCount;
+        this.curLoop = 1;
+        if (this.loop === false){
+            // number in which to stop going through array
+            // set to strings[] array (length - 1) to stop deleting after last string is typed
+            this.stopArray = this.strings.length-1;
+        }
+        else{
+            this.stopArray = this.strings.length;
+        }
+
+        // All systems go!
+        this.init();
+        this.build();
+    }
+
+        Typed.prototype =  {
+
+            constructor: Typed
+
+            , init: function(){
+                // begin the loop w/ first current string (global self.string)
+                // current string will be passed as an argument each time after this
+                this.typewrite(this.string, this.strPos);
+            }
+
+            , build: function(){
+                this.el.after("<span id=\"typed-cursor\">|</span>");
+            }
+
+            // pass current string state to each function
+            , typewrite: function(curString, curStrPos){
+
+                // varying values for setTimeout during typing
+                // can't be global since number changes each time loop is executed
+                var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+                var self = this;
+
+                // ------------- optional ------------- //
+                // backpaces a certain string faster
+                // ------------------------------------ //
+                // if (self.arrayPos == 1){
+                //  self.backDelay = 50;
+                // }
+                // else{ self.backDelay = 500; }
+
+                // containg entire typing function in a timeout
+                setTimeout(function() {
+
+                    // make sure array position is less than array length
+                    if (self.arrayPos < self.strings.length){
+
+                        // start typing each new char into existing string
+                        // curString is function arg
+                        self.el.text(self.text + curString.substr(0, curStrPos));
+
+                        // check if current character number is the string's length
+                        // and if the current array position is less than the stopping point
+                        // if so, backspace after backDelay setting
+                        if (curStrPos > curString.length && self.arrayPos < self.stopArray){
+                            clearTimeout(clear);
+                            var clear = setTimeout(function(){
+                                self.backspace(curString, curStrPos);
+                            }, self.backDelay);
+                        }
+
+                        // else, keep typing
+                        else{
+                            // add characters one by one
+                            curStrPos++;
+                            // loop the function
+                            self.typewrite(curString, curStrPos);
+                            // if the array position is at the stopping position
+                            // finish code, on to next task
+                            if (self.loop === false){
+                                if (self.arrayPos === self.stopArray && curStrPos === curString.length){
+                                    // animation that occurs on the last typed string
+                                    // fires callback function
+                                    var clear = self.options.callback();
+                                    clearTimeout(clear);
+                                }
+                            }
+                        }
+                    }
+                    // if the array position is greater than array length
+                    // and looping is active, reset array pos and start over.
+                    else if (self.loop === true && self.loopCount === false){
+                        self.arrayPos = 0;
+                        self.init();
+                    }
+                        else if(self.loopCount !== false && self.curLoop < self.loopCount){
+                            self.arrayPos = 0;
+                            self.curLoop = self.curLoop+1;
+                            self.init();
+                        }
+
+                // humanized value for typing
+                }, humanize);
+
+            }
+
+            , backspace: function(curString, curStrPos){
+
+                // varying values for setTimeout during typing
+                // can't be global since number changes each time loop is executed
+                var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+                var self = this;
+
+                setTimeout(function() {
+
+                    // ----- this part is optional ----- //
+                    // check string array position
+                    // on the first string, only delete one word
+                    // the stopNum actually represents the amount of chars to
+                    // keep in the current string. In my case it's 14.
+                     if (self.arrayPos == 1, 2, 3, 4){
+                        self.stopNum = 0;
+                     }
+                    //every other time, delete the whole typed string
+                     //else{
+                        //self.stopNum = 0;
+                     //}
+
+                    // ----- continue important stuff ----- //
+                    // replace text with current text + typed characters
+                    self.el.text(self.text + curString.substr(0, curStrPos));
+
+                    // if the number (id of character in current string) is
+                    // less than the stop number, keep going
+                    if (curStrPos > self.stopNum){
+                        // subtract characters one by one
+                        curStrPos--;
+                        // loop the function
+                        self.backspace(curString, curStrPos);
+                    }
+                    // if the stop number has been reached, increase
+                    // array position to next string
+                    else if (curStrPos <= self.stopNum){
+                        clearTimeout(clear);
+                        var clear = self.arrayPos = self.arrayPos+1;
+                        // must pass new array position in this instance
+                        // instead of using global arrayPos
+                        self.typewrite(self.strings[self.arrayPos], curStrPos);
+                    }
+
+                // humanized value for typing
+                }, humanize);
+
+            }
+
+        }
+
+    $.fn.typed = function (option) {
+        return this.each(function () {
+          var $this = $(this)
+            , data = $this.data('typed')
+            , options = typeof option == 'object' && option
+          if (!data) $this.data('typed', (data = new Typed(this, options)))
+          if (typeof option == 'string') data[option]()
+        });
+    }
+
+    $.fn.typed.defaults = {
+        strings: ["Hello, hola, hi! ", "Welcome to my website ", "Go on, scroll down", ":)"],
+        // typing and backspacing speed
+        typeSpeed: 50, // speed decreases as number increased
+        // time before backspacing
+        backDelay: 100,
+        // loop
+        loop: true,
+        // false = infinite
+        loopCount: false,
+        // ending callback function
+        callback: function(){ null }
+    }
+
+
+}(window.jQuery);
+
+
+$(function(){
+
+        $("#typed").typed({
+            strings: ["développeuse","curieuse","à l'écoute", "persévérante", "créative"], //Strings to display when typing
+            typeSpeed: 40,
+            backDelay: 600,
+            loop: true,
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); }
+        });
+
+        function foo(){ console.log("Callback"); }
+
+    });
     </script>
 </body>
 

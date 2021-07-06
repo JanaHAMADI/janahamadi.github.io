@@ -5,16 +5,25 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Geneva, Verdana, Tahoma, sans-serif;
-    font-size: 10px;
     color: #38155C;
     scroll-behavior: smooth;
     text-align: center;
+    max-width:100vw;
 }
+html { font-size: calc(1em + 1vw); }
+button { font-size: inherit; 
+    color: inherit;
+    cursor: pointer;}
+input { font-size: inherit; }
+a {text-decoration: none;}
+a:active {color: inherit;}
 
 .dark { color:#9838F5;}
 .pale { color: #20F5A7;}
-.dark_background { background-color: #d7b7f8; }
-.pale_background { background-color: #6ef7c4; }
+.white {color: white;}
+.dark_background { background-color: #9838F5; }
+.pale_background { background-color: #20F5A7; }
+.dark_shadow {box-shadow: #4d1c7e 2px 2px 2px;}
 .filter_dark {
     filter: invert(31%) 
     sepia(57%) saturate(6788%) 
@@ -22,85 +31,92 @@ html, body {
     contrast(95%);
 }
 
-.glass {
-    opacity: 0.65;
-    border-radius: 3px;
+.griddy {display: grid;}
+.centered {place-items: center;}
+.cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
 }
-.glass:hover,:active { opacity: 1; }
+.flexy {display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;}
 
-
-
-/* codepen code*/
-body{
-    max-width:100vw;
-    color:#fff;
-  }
+/* /////////////////// landing page /////////// */
   #landing{
     height:100vh;
-    background:url(https://images.unsplash.com/photo-1450380412196-4e27fb7d2270?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375) no-repeat center center fixed;
+    background:url("img/laptop.svg") no-repeat center center fixed;
     background-size:cover;
     -webkit-background-size:cover;
     -o-background-size:cover;
     -moz-background-size:cover;
   }
-  #portfolio{
-    background:url(https://images.unsplash.com/photo-1449709992276-24bbca940809?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c5de67a556b843958d279d2b74a09550) no-repeat center center fixed;
-    background-size:cover;
-    -webkit-background-size:cover;
-    -o-background-size:cover;
-    -moz-background-size:cover;
+  h1 { font-size: 1.5em;
+        margin: 15px; }
+  #jump {margin-top: 2rem;}
+  #jump:hover {
+    background: rgba(32,245,167, 0.3);
+   border-radius: 20px;
+   box-shadow: lightgray 4px 4px 4px;
+    }
+  #portfolio {
     min-height:100vh;
     position: relative;
   }
+  .navbar {position: sticky;
+            top: 0;
+        font-size: 0.5rem;}
+.box {width: clamp(23ch, 50%, 46ch);}
+.image {min-width: 30vw;
+        max-width: 300px;}
+
+  @keyframes blink
+  {
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+  }
+        @-webkit-keyframes blink
+        {
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink
+        {
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink
+        {
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink
+        {
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+/* code for animated blinking cursor */
+#typed-cursor
+{
+      opacity: 1;
+      font-size: 40px;
+      color: #9838F5;
+      font-weight: 50;
+      -webkit-animation: blink 1s infinite;
+      -moz-animation: blink 1s infinite;
+      -ms-animation: blink 1s infinite;
+      -o-animation: blink 1s infinite;
+      animation: blink 1s infinite;
+}
   /* end landing page */
   
-  
-  /* cool name effect */
-  a:hover,a:focus{text-decoration:none;}
-  .svg-wrapper {
-    position: relative;
-    top: 35%;
-    transform: translateY(-50%);
-      margin: 0 auto;
-    width: 320px;
-    max-height:60px;
-    cursor:default;
-  }
-  .shape {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
-    fill: transparent;
-    /* modify this with the color you want */
-    stroke: #19f6e8;  
-    border-bottom: 5px solid black;
-    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-  }
-  .text {
-    font-family: serif;
-    font-size: 22px;
-    line-height: 32px;
-    letter-spacing: 8px;
-    color: #fff;
-    top: -48px;
-    position: relative;
-    text-align:center;
-  }
-  .svg-wrapper:hover .shape {
-    stroke-width: 2px;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 760;
-  }
-  /* end cool name effect */
-  #port-wrapper{
-    width:100%;height:100%;
-    background:rgba(0,0,0,0.3);
-    position:absolute;
-  }
-  .text-2 h2{
-    font-family: 'Josefin Slab', serif;
-    font-size: 20px;
-  }
+  /* portfolio*/
   button{
     background:none;
     border:none;
@@ -111,39 +127,11 @@ body{
     outline:none;
   }
   .content{
-    margin:50px;
-    margin-top:75px;
-    margin-bottom:0;
+    margin:20px;
+    min-height: 100vh;
   }
-  @media only screen and (max-width : 768px){
-    #text-changer-1{
-      margin-left:50px;
-    }
-  }
-  #text-changer-1{
-    max-width:750px;  
-    margin-left:75px;
-  }
-  #text-changer-1 img{
-    margin:-10px 10px 5px 0;
-    border-radius:50px;
-  }
-  #text-changer-3 .social{
-    margin:35px;
-  }
-  #text-changer-3 .fa{
-    margin:5px;
-    color:#fff;
-  }
-  #text-changer-3 .fa:hover{
-    color:#2e8ece;
-  }
-  .project{
-    height:100%; width:100%;
-    border:1px solid #fff;
-    margin-bottom:5px;
-  }
-  #text-changer-2{
-    text-align:center;
-    height:100%;
-  }
+  
+/* contact*/
+.logo {
+    width: 2rem;
+}
