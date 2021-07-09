@@ -38,15 +38,14 @@ a:active {color: inherit;}
     grid-gap: 1rem;
 }
 .flexy {display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;}
 
 /* /////////////////// landing page /////////// */
   #landing{
     height:100vh;
-    background:url("img/laptop.svg") no-repeat center center fixed;
+    background:url("img/laptop.svg") no-repeat center center;
     background-size:cover;
     -webkit-background-size:cover;
     -o-background-size:cover;
@@ -54,12 +53,8 @@ a:active {color: inherit;}
   }
   h1 { font-size: 1.5em;
         margin: 15px; }
-  #jump {margin-top: 2rem;}
-  #jump:hover {
-    background: rgba(32,245,167, 0.3);
-   border-radius: 20px;
-   box-shadow: lightgray 4px 4px 4px;
-    }
+  #jump {margin-top: 2.5rem;}
+  #jump:hover {filter: brightness(0.5);}
   #portfolio {
     min-height:100vh;
     position: relative;
@@ -130,8 +125,13 @@ a:active {color: inherit;}
     margin:20px;
     min-height: 100vh;
   }
-  
+  .card {height: 15rem;}
+  .inner {display: none;}
+  .card:hover .hide {display: none;}
+  .card:hover .inner {display: block;}
 /* contact*/
 .logo {
     width: 2rem;
 }
+.social a {margin: 1rem;
+          padding: 1rem;}
