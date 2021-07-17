@@ -84,6 +84,15 @@
                                 utilisée était h2 (in memory). L'API était liée au front sous Angular.</p>
 
                     </div>
+
+                    <div class="card pale_background dark_shadow flexy betweeny">
+                        <h3>Tetris</h3>
+                        
+                            <p>Tetris en JavaScript, html et CSS, disponible 
+                                <a href="https://codepen.io/JanaHamadi/pen/LYGNgYB" target="_blank">sur CodePen.</a>
+                            </p>
+                    
+                    </div>
                     
                 </div>
             </div>
@@ -103,11 +112,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
     crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
     <script>
   
-  $("button").click(function(){
+  $(".nav-button").click(function(){
     var target = $(this).attr("href");
     $(".content").not(target).hide();
     $(target).show("slow");
@@ -119,9 +128,9 @@
   $("#first").click();
   
 
-$( window ).resize( function() {
-  centerSplash();
-});
+//$( window ).resize( function() {
+//  centerSplash();
+//});
 </script>
 
 <script>
